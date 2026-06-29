@@ -177,7 +177,7 @@ Activated rules (6):
   [moderate] Bayoneting sign
   [moderate] Notching sign
 ```
-
+<!--
 ---
 
 ## Citation
@@ -194,7 +194,7 @@ If you find this work useful, please cite:
   year      = {2026}
 }
 ```
-
+-->
 ---
 
 ## License
