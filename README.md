@@ -3,7 +3,7 @@
 [![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-red.svg)](https://pytorch.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Paper](https://img.shields.io/badge/Paper-IEEE%20BIBM%202026-orange.svg)]()
+
 
 > Official implementation of **GlaKG**, a biomarker-centric fundus knowledge graph for explainable glaucoma diagnosis and risk stratification, submitted to IEEE BIBM 2026.
 
@@ -14,7 +14,7 @@
 GlaKG integrates structural biomarkers, clinical rules, and fundus image features into a unified knowledge graph, providing interpretable reasoning chains for every glaucoma diagnosis.
 
 <p align="center">
-  <img src="kg_output/fig1_schema_v2.png" width="700" alt="GlaKG Schema"/>
+  <img src="kg_output/fig1_schema_v2.html" width="700" alt="GlaKG Schema"/>
   <br>
   <em>Figure 1: GlaKG entity-relation schema</em>
 </p>
