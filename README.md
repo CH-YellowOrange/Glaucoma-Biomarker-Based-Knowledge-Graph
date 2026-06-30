@@ -3,7 +3,7 @@
 [![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-red.svg)](https://pytorch.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-<!--[![Paper](https://img.shields.io/badge/Paper-IEEE%20BIBM%202026-orange.svg)]() -->
+[![Paper](https://img.shields.io/badge/Paper-IEEE%20BIBM%202026-orange.svg)]()
 
 > Official implementation of **GlaKG**, a biomarker-centric fundus knowledge graph for explainable glaucoma diagnosis and risk stratification, submitted to IEEE BIBM 2026.
 
@@ -61,23 +61,23 @@ GlaKG/
 │   └── Data/
 │       ├── train-00000-of-00001.parquet
 │       └── test-00000-of-00001.parquet
-├── kg_output/                    # Generated KG files and figures
+├── kg_output/                        # Generated KG files and figures
 │   ├── kg_nodes.csv
 │   ├── kg_edges.csv
 │   ├── fig1_schema_v2.html
 │   ├── fig2_case_v2.html
 │   └── fig3_overview_v2.html
-├── data_preprocessing.ipynb      # KG construction pipeline
-├── parse_glaucoma_kg.py          # Parquet → KG triples parser
-├── import_to_neo4j.cypher        # Neo4j import script (optional)
-├── kg_statistics_cells.py        # Graph statistics analysis
-├── clinical_rules_cells.py       # Clinical rule encoding
-├── kg_visualization_cells.py     # KG visualization (pyvis)
-├── classification_image_cells.py # Image-based classification
-├── classification_risk_cells.py  # Risk stratification
-├── xai_cells_v2.py               # Feature importance analysis
-├── error_analysis_cells.py       # Error analysis
-├── gnn_cells.py                  # GCN / GAT experiments
+├── data_preprocessing.ipynb          # Data pipeline + KG construction
+├── KG_Statistics.ipynb               # Graph statistics analysis
+├── rules.ipynb                       # Clinical rule encoding
+├── visualization.ipynb               # KG visualization (pyvis)
+├── evaluation.ipynb                  # KG quality evaluation metrics
+├── classification_experiment_cells.ipynb  # Biomarker-based classification
+├── classification_image.ipynb        # Image-based classification + KG fusion
+├── classification_risk.ipynb         # Four-class risk stratification
+├── xAI.ipynb                         # Feature importance analysis (XAI)
+├── error_analysis.ipynb              # Error analysis (TP/FP/FN/TN)
+├── GNN.ipynb                         # GCN / GAT experiments
 └── README.md
 ```
 
@@ -104,40 +104,48 @@ pip install torch-geometric
 
 ## Quick Start
 
-### Step 1: Parse parquet → KG triples
+### Step 1: Data preprocessing + KG construction
+Open and run `data_preprocessing.ipynb`.
 
-```bash
-python parse_glaucoma_kg.py Dataset/Data/ --out kg_output/
-```
+### Step 2: Graph statistics analysis
+Open and run `KG_Statistics.ipynb`.
 
-### Step 2: Run statistics analysis
-
-Open and run `kg_statistics_cells.py` in Jupyter notebook.
-
-### Step 3: Encode clinical rules
-
-Open and run `clinical_rules_cells.py` in Jupyter notebook.
+### Step 3: Clinical rule encoding
+Open and run `rules.ipynb`.
 
 ### Step 4: Visualize the KG
-
-Open and run `kg_visualization_cells.py` in Jupyter notebook.
+Open and run `visualization.ipynb`.
 Open the generated HTML files in your browser:
 - `kg_output/fig1_schema_v2.html` — Schema graph
 - `kg_output/fig2_case_v2.html` — Single case reasoning chain
 - `kg_output/fig3_overview_v2.html` — Overview graph
 
-### Step 5: Run classification experiments
+### Step 5: KG quality evaluation
+Open and run `evaluation.ipynb`.
 
-```python
+### Step 6: Classification experiments
+```bash
+# Biomarker-based classification
+# Run classification_experiment_cells.ipynb
+
 # Image-based classification + KG fusion
-# Run classification_image_cells.py in Jupyter
+# Run classification_image.ipynb
 
-# Risk stratification
-# Run classification_risk_cells.py in Jupyter
-
-# GNN experiments
-# Run gnn_cells.py in Jupyter
+# Four-class risk stratification
+# Run classification_risk.ipynb
 ```
+
+### Step 7: XAI + Error analysis
+```bash
+# Feature importance analysis
+# Run xAI.ipynb
+
+# Error analysis
+# Run error_analysis.ipynb
+```
+
+### Step 8: GNN experiments
+Open and run `GNN.ipynb`.
 
 ---
 
@@ -177,10 +185,10 @@ Activated rules (6):
   [moderate] Bayoneting sign
   [moderate] Notching sign
 ```
-<!--
+
 ---
 
-## Citation
+<!-- ## Citation
 
 If you find this work useful, please cite:
 
@@ -195,6 +203,7 @@ If you find this work useful, please cite:
 }
 ```
 -->
+
 ---
 
 ## License
