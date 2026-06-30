@@ -14,7 +14,7 @@
 GlaKG integrates structural biomarkers, clinical rules, and fundus image features into a unified knowledge graph, providing interpretable reasoning chains for every glaucoma diagnosis.
 
 <p align="center">
-  <img src="kg_output/fig1_schema_v2.html" width="700" alt="GlaKG Schema"/>
+  <img src="kg_output/fig1_schema_v2.png" width="700" alt="GlaKG Schema"/>
   <br>
   <em>Figure 1: GlaKG entity-relation schema</em>
 </p>
