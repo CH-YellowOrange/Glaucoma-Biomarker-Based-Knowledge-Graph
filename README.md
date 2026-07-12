@@ -192,8 +192,6 @@ Activated rules (6):
 
 If you find this work useful, please cite:
 
-If you find this work useful, please cite:
-
 ```bibtex
 @article{huang2026glakg,
   title={GlaKG: A Biomarker-Centric Fundus Knowledge Graph for Explainable Glaucoma Diagnosis and Risk Assessment},
