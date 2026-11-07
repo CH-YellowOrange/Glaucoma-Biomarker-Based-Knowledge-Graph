@@ -194,7 +194,7 @@ If you find this work useful, please cite:
 
 ```bibtex
 
-@inproceedings{huang2026glakg,
+@inproceedings{glakg,
   title={GlaKG: A Biomarker-Centric Fundus Knowledge Graph for Explainable Glaucoma Diagnosis and Risk Assessment},
   author={Huang, Cheng and Zhang, Jia and Jiang, Yi and Liu, Yang and Kooner, Karanjit and Liu, Yadi and Lee, Tsengdar and Xie, Yang and Shi, Wenqi and Xiao, Guanghua},
   booktitle={2026 IEEE International Conference on Bioinformatics and Biomedicine (BIBM)},
